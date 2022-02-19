@@ -1,0 +1,56 @@
+/* add css module styles here (optional) */
+
+
+.button {
+  position:relative;
+  border:none;
+  z-index:1;
+  padding:13px;
+  transition:all .5s;
+  width:8%;
+  margin:1rem;
+}
+.button::before,
+.button::after{
+  position:absolute;
+  content:"";
+  z-index:-1;
+  background-color:#ff96ad;
+  width: 0;
+}
+.glow:hover {
+  background-color:#ff96ad;
+  box-shadow:0 0 5px #ff96ad, 0 0 25px
+  #ff96ad,0 0 58px #ff96ad, 0 0 200px #ff96ad;
+
+}
+.door:hover {
+  box-shadow: inset -10.5em 0 0 0
+  #ff96ad, inset 10.5em 0 0 0 #ff96ad
+}
+.shutterUp::after {
+  height:0;
+  left:0;
+  top:0;
+  transition-duration:.6s;
+  width:100%;
+}
+.shutterUp:hover:after {
+  height: 100%;
+}
+.shutterDown::after {
+  height:0;
+  left:0;
+  bottom:0;
+  transition-duration:.6s;
+  width:100%;
+}
+.shutterDown:hover:after {
+  height: 100%;
+}
+.double:hover {
+  box-shadow:10px 10px 0 #ff96ad;
+  top:-5px;
+  left:-5px;
+}
+
